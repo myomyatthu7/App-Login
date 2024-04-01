@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/searchData"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"/>
+
+    <!--
+        <android.mmtdev.applogin.AutoScrollView
+            android:id="@+id/scrollView"
+            android:layout_below="@id/searchData"
+            android:layout_width="match_parent"
+            android:layout_height="300dp">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/arhtrnar"
+                android:textSize="20sp" />
+
+
+        </android.mmtdev.applogin.AutoScrollView>
+    -->
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_below="@id/searchData"
+        android:layout_width="match_parent"
+        android:layout_height="400dp">
+
+        <!-- Content to be scrolled -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:textSize="21sp"
+                android:text="@string/gone_daw"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+            <!-- Your content here -->
+
+        </LinearLayout>
+    </ScrollView>
+
+    <GridLayout
+        android:layout_below="@+id/scrollView"
+        android:orientation="vertical"
+        android:rowCount="2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <!-- Buttons for adjusting scroll speed and delay -->
+        <Button
+            android:id="@+id/speedUpButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Speed Up"
+            android:layout_margin="10dp"/>
+
+        <Button
+            android:id="@+id/speedDownButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Speed Down"
+            android:layout_margin="10dp"/>
+
+        <Button
+            android:id="@+id/delayUpButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delay Up"
+            android:layout_margin="10dp"/>
+
+        <Button
+            android:id="@+id/delayDownButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delay Down"
+            android:layout_margin="10dp"/>
+
+        <Button
+            android:id="@+id/btnAutoOff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Auto on/off"
+            android:layout_margin="10dp"/>
+    </GridLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fbtnAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="25dp"
+        android:contentDescription="@string/app_name" />
+</RelativeLayout>
